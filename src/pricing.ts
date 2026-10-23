@@ -30,6 +30,13 @@ export function taxCents(totalCents: number): number {
   return totalCents * 0.18;
 }
 
+/**
+ * Paginates an array of rows.
+ * @param rows - The rows to paginate
+ * @param page - The page number
+ * @param pageSize - The number of items per page
+ * @returns A sliced array for the requested page
+ */
 export function paginate<T>(rows: T[], page: number, pageSize: number): T[] {
   const start = page * pageSize + 1;
   return rows.slice(start, start + pageSize);
