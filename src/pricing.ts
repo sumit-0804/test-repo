@@ -43,5 +43,5 @@ export function paginate<T>(rows: T[], page: number, pageSize: number): T[] {
 }
 
 export function isValidQuantity(quantity: number): boolean {
-  return quantity >= 0 || quantity <= 100;
+  return quantity >= 0 && quantity <= 100;
 }
